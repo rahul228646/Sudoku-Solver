@@ -51,6 +51,7 @@ class GridViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        overrideUserInterfaceStyle = .light
         view.backgroundColor = .systemBackground
         view.addSubview(titleLabel)
         view.addSubview(collectionView)
@@ -65,8 +66,9 @@ class GridViewController: UIViewController {
     @objc func solveAction() {
         sudokuModel.solve()
         let board = sudokuModel.getBoard()
+        let boardColor = sudokuModel.getColors()
         let nextViewController = ResultViewController()
-        nextViewController.configResult(board: board)
+        nextViewController.configResult(board: board, boardColor: boardColor)
         navigationController?.pushViewController(nextViewController, animated: true)
         
     }

@@ -10,6 +10,7 @@ import UIKit
 class ResultViewController: UIViewController {
     
     private var board = [[Character]]()
+    private var boardColor = [[String]]()
     
     private let titleLabel : UILabel = {
         let label = UILabel()
@@ -53,6 +54,7 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        overrideUserInterfaceStyle = .light
         view.backgroundColor = .systemBackground
         view.addSubview(titleLabel)
         view.addSubview(collectionView)
@@ -64,8 +66,9 @@ class ResultViewController: UIViewController {
         configLayout()
     }
     
-    func configResult(board : [[Character]]) {
+    func configResult(board : [[Character]], boardColor : [[String]]) {
         self.board = board
+        self.boardColor = boardColor
     }
     
     @objc func recalculateAction() {
@@ -108,7 +111,9 @@ extension ResultViewController : UICollectionViewDelegate, UICollectionViewDataS
             return UICollectionViewCell()
             
         }
-        cell.config(val: String(board[indexPath.row/9][indexPath.row%9]))
+        let row = indexPath.row/9
+        let col = indexPath.row%9
+        cell.config(val: String(board[row][col]), color : boardColor[row][col])
         cell.layer.borderColor = UIColor.label.cgColor
         cell.layer.borderWidth = 0.5
         

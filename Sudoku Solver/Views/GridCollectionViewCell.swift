@@ -17,7 +17,14 @@ class GridCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
     static let identifier = "GridCollectionViewCell"
     var idx : Int = 0
     weak var delegate: (GridCollectionViewCellDelegate)?
+
     
+    let toolbar : UIToolbar = {
+        let toolbar = UIToolbar()
+        return toolbar
+    }()
+    
+
     private let sudokuInput : UITextField = {
         let sudokuInput = UITextField()
         sudokuInput.leftViewMode = .always
@@ -26,7 +33,6 @@ class GridCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
         sudokuInput.keyboardType = .numberPad
         sudokuInput.textColor = .red
         sudokuInput.font = .systemFont(ofSize: 24, weight: .light)
-
         return sudokuInput
     }()
     
@@ -34,6 +40,19 @@ class GridCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
         super.init(frame: frame)
         contentView.addSubview(sudokuInput)
         sudokuInput.leftView = UIView(frame: CGRect(x: 0, y: 0, width: contentView.bounds.width/3.2, height: 0))
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                        target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: .done,
+                                         target: self, action: #selector(doneButtonTapped))
+        
+        toolbar.setItems([flexSpace, doneButton], animated: true)
+        toolbar.sizeToFit()
+        sudokuInput.inputAccessoryView = toolbar
+    }
+    
+    @objc func doneButtonTapped() {
+        sudokuInput.resignFirstResponder()
     }
     
     required init?(coder: NSCoder) {
@@ -43,7 +62,7 @@ class GridCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
         super.layoutSubviews()
         sudokuInput.frame = contentView.bounds
         sudokuInput.delegate = self
-
+        
     }
     
     func index(position : Int) {
@@ -58,8 +77,7 @@ class GridCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
         }
         
         //Limit the character count to 10.
-        if ((textField.text!) + string).count > 10 {
-            
+        if ((textField.text!) + string).count > 1 {
             return false
         }
         
@@ -72,7 +90,7 @@ class GridCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
         return true
     }
     
-
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let text = textField.text {
             self.delegate?.collectionViewTableViewCellDidTapCell(self, input : text, pos: idx)
