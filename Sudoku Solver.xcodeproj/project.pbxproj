@@ -68,18 +68,42 @@
 			children = (
 				B7D595C929072B5D00E964BC /* AppDelegate.swift */,
 				B7D595CB29072B5D00E964BC /* SceneDelegate.swift */,
-				B7D595CD29072B5D00E964BC /* GridViewController.swift */,
+				B7D595EF2909B2D000E964BC /* Models */,
+				B7D595F02909B2E200E964BC /* Views */,
+				B7D595F12909B2FD00E964BC /* Controllers */,
 				B7D595CF29072B5D00E964BC /* Main.storyboard */,
 				B7D595D229072B5E00E964BC /* Assets.xcassets */,
 				B7D595D429072B5E00E964BC /* LaunchScreen.storyboard */,
 				B7D595D729072B5E00E964BC /* Info.plist */,
-				B7D595DD2908521F00E964BC /* GridCollectionViewCell.swift */,
-				B7D595DF2909A3C900E964BC /* SudokuModel.swift */,
-				B7D595E12909A4A300E964BC /* SudokuBrain.swift */,
-				B7D595E32909A7F700E964BC /* ResultViewController.swift */,
-				B7D595ED2909AAE900E964BC /* ResultCollectionViewCell.swift */,
 			);
 			path = "Sudoku Solver";
+			sourceTree = "<group>";
+		};
+		B7D595EF2909B2D000E964BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7D595DF2909A3C900E964BC /* SudokuModel.swift */,
+				B7D595E12909A4A300E964BC /* SudokuBrain.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B7D595F02909B2E200E964BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7D595DD2908521F00E964BC /* GridCollectionViewCell.swift */,
+				B7D595ED2909AAE900E964BC /* ResultCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B7D595F12909B2FD00E964BC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B7D595CD29072B5D00E964BC /* GridViewController.swift */,
+				B7D595E32909A7F700E964BC /* ResultViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
