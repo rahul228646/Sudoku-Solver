@@ -14,7 +14,7 @@ class ResultCollectionViewCell: UICollectionViewCell {
     private let label : UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 24, weight: .bold)
+        label.font = .systemFont(ofSize: 24, weight: .light)
         return label
     }()
 

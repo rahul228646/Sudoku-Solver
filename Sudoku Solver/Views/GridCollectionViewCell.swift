@@ -25,7 +25,7 @@ class GridCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
         sudokuInput.backgroundColor = .white
         sudokuInput.keyboardType = .numberPad
         sudokuInput.textColor = .red
-        sudokuInput.font = .systemFont(ofSize: 24, weight: .bold)
+        sudokuInput.font = .systemFont(ofSize: 24, weight: .light)
 
         return sudokuInput
     }()
