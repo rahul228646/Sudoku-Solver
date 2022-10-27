@@ -111,10 +111,11 @@ extension ResultViewController : UICollectionViewDelegate, UICollectionViewDataS
             return UICollectionViewCell()
             
         }
+        cell.position(idx : indexPath.row)
         let row = indexPath.row/9
         let col = indexPath.row%9
         cell.config(val: String(board[row][col]), color : boardColor[row][col])
-        cell.layer.borderColor = UIColor.label.cgColor
+        cell.layer.borderColor = UIColor.gray.cgColor
         cell.layer.borderWidth = 0.5
         
         return cell

@@ -62,6 +62,13 @@ class GridCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
         super.layoutSubviews()
         sudokuInput.frame = contentView.bounds
         sudokuInput.delegate = self
+        if idx >= 18 && idx <= 26 || idx >= 45 && idx <= 53 {
+            addBottomBorder(with: .label, andWidth: 2)
+        }
+        
+        if idx%3 == 0 {
+            addLeftBorder(with: .label, andWidth: 2)
+        }
         
     }
     
@@ -96,6 +103,24 @@ class GridCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
             self.delegate?.collectionViewTableViewCellDidTapCell(self, input : text, pos: idx)
         }
     }
+    
+    func addBottomBorder(with color: UIColor?, andWidth borderWidth: CGFloat) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+        border.frame = CGRect(x: 0, y: frame.size.height - borderWidth, width: frame.size.width, height: borderWidth)
+        addSubview(border)
+    }
+    
+    func addLeftBorder(with color: UIColor?, andWidth borderWidth: CGFloat) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.frame = CGRect(x: 0, y: 0, width: borderWidth, height: frame.size.height)
+        border.autoresizingMask = [.flexibleHeight, .flexibleRightMargin]
+        addSubview(border)
+    }
+
+
 
 }
 
