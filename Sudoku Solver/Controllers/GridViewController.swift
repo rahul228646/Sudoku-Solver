@@ -111,8 +111,7 @@ extension GridViewController : UICollectionViewDelegate, UICollectionViewDataSou
         }
         cell.index(position: indexPath.row)
         cell.delegate = self
-        cell.layer.borderColor = UIColor.gray.cgColor
-        cell.layer.borderWidth = 0.5
+
         
         return cell
     }

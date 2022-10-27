@@ -42,12 +42,21 @@ class ResultCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         label.frame = contentView.bounds
+
         if idx >= 18 && idx <= 26 || idx >= 45 && idx <= 53 {
             addBottomBorder(with: .label, andWidth: 2)
+        }
+        else {
+            addBottomBorder(with: .gray, andWidth: 0.5)
+            addLeftBorder(with: .gray, andWidth: 0.5)
         }
         
         if idx%3 == 0 {
             addLeftBorder(with: .label, andWidth: 2)
+        }
+        else {
+            addBottomBorder(with: .gray, andWidth: 0.5)
+            addLeftBorder(with: .gray, andWidth: 0.5)
         }
         
     }

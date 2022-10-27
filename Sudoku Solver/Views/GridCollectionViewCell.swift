@@ -31,6 +31,8 @@ class GridCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
         sudokuInput.keyboardType = .numberPad
         sudokuInput.textColor = .red
         sudokuInput.font = .systemFont(ofSize: 24, weight: .light)
+//        sudokuInput.layer.borderColor = UIColor.gray.cgColor
+//        sudokuInput.layer.borderWidth = 0.5
         return sudokuInput
     }()
     
@@ -65,9 +67,17 @@ class GridCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
         if idx >= 18 && idx <= 26 || idx >= 45 && idx <= 53 {
             addBottomBorder(with: .label, andWidth: 2)
         }
+        else {
+            addBottomBorder(with: .gray, andWidth: 0.5)
+            addLeftBorder(with: .gray, andWidth: 0.5)
+        }
         
         if idx%3 == 0 {
             addLeftBorder(with: .label, andWidth: 2)
+        }
+        else {
+            addBottomBorder(with: .gray, andWidth: 0.5)
+            addLeftBorder(with: .gray, andWidth: 0.5)
         }
         
     }

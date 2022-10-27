@@ -115,9 +115,6 @@ extension ResultViewController : UICollectionViewDelegate, UICollectionViewDataS
         let row = indexPath.row/9
         let col = indexPath.row%9
         cell.config(val: String(board[row][col]), color : boardColor[row][col])
-        cell.layer.borderColor = UIColor.gray.cgColor
-        cell.layer.borderWidth = 0.5
-        
         return cell
     }
     
