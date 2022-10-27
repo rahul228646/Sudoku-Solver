@@ -54,7 +54,7 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        overrideUserInterfaceStyle = .light
+//        overrideUserInterfaceStyle = .light
         view.backgroundColor = .systemBackground
         view.addSubview(titleLabel)
         view.addSubview(collectionView)

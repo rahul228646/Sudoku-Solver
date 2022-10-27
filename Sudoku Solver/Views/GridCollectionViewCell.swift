@@ -17,7 +17,6 @@ class GridCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
     static let identifier = "GridCollectionViewCell"
     var idx : Int = 0
     weak var delegate: (GridCollectionViewCellDelegate)?
-
     
     let toolbar : UIToolbar = {
         let toolbar = UIToolbar()
@@ -29,7 +28,6 @@ class GridCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
         let sudokuInput = UITextField()
         sudokuInput.leftViewMode = .always
         sudokuInput.autocapitalizationType = .none
-        sudokuInput.backgroundColor = .white
         sudokuInput.keyboardType = .numberPad
         sudokuInput.textColor = .red
         sudokuInput.font = .systemFont(ofSize: 24, weight: .light)
@@ -38,6 +36,7 @@ class GridCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+       
         contentView.addSubview(sudokuInput)
         sudokuInput.leftView = UIView(frame: CGRect(x: 0, y: 0, width: contentView.bounds.width/3.2, height: 0))
         
@@ -49,6 +48,7 @@ class GridCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
         toolbar.setItems([flexSpace, doneButton], animated: true)
         toolbar.sizeToFit()
         sudokuInput.inputAccessoryView = toolbar
+        
     }
     
     @objc func doneButtonTapped() {
@@ -96,6 +96,7 @@ class GridCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
             self.delegate?.collectionViewTableViewCellDidTapCell(self, input : text, pos: idx)
         }
     }
+
 }
 
 

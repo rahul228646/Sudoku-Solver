@@ -14,7 +14,12 @@ class SudokuModel {
     
     func editBoard(row : Int, col : Int, val : Character) {
         board[row][col] = val
-        boardColor[row][col] = "red"
+        if val == "." {
+            boardColor[row][col] = "green"
+        }
+        else {
+            boardColor[row][col] = "red"
+        }
     }
     
     func solve() {

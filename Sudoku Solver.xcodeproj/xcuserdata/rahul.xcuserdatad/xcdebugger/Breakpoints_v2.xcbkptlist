@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D8C56EFE-6742-473D-95A1-6CD174B1A1DA"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A4CC586-87F8-420F-BBDC-D14DFFF6F04D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sudoku Solver/Views/GridCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "GridCollectionViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "4A4CC586-87F8-420F-BBDC-D14DFFF6F04D - fa6a964fc080876e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UIToolbar in variable initialization expression of Sudoku_Solver.GridCollectionViewCell.toolbar : __C.UIToolbar"
+                  moduleName = "Sudoku Solver"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rahul/ios/Programatic%20ui/Sudoku%20Solver/Sudoku%20Solver/Views/GridCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "4A4CC586-87F8-420F-BBDC-D14DFFF6F04D - c0e67f042fc99bd9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sudoku_Solver.GridCollectionViewCell.toolbar.getter : __C.UIToolbar"
+                  moduleName = "Sudoku Solver"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rahul/ios/Programatic%20ui/Sudoku%20Solver/Sudoku%20Solver/Views/GridCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

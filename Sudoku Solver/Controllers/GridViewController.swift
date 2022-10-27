@@ -51,7 +51,7 @@ class GridViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        overrideUserInterfaceStyle = .light
+//        overrideUserInterfaceStyle = .light
         view.backgroundColor = .systemBackground
         view.addSubview(titleLabel)
         view.addSubview(collectionView)
@@ -117,7 +117,7 @@ extension GridViewController : UICollectionViewDelegate, UICollectionViewDataSou
         return cell
     }
     
-    
+
 }
 
 extension GridViewController : GridCollectionViewCellDelegate {
@@ -133,5 +133,6 @@ extension GridViewController : GridCollectionViewCellDelegate {
     
     
 }
+
 
 
