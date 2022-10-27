@@ -1,3 +1,4 @@
 # Sudoku Solver
 
-![final_635a65cd8cb10400506689a9_528563](https://user-images.githubusercontent.com/56363090/198293057-6438929f-baa5-41f8-952e-bd5f6ad5e482.gif)
+
+![final_635a93d87b58b5007e222676_990437](https://user-images.githubusercontent.com/56363090/198314503-6b76de34-f247-4660-9a69-6e7cf81d07dc.gif)
